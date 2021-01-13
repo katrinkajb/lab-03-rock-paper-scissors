@@ -1,7 +1,7 @@
 // import functions and grab DOM elements
 
 const shootButton = document.getElementById('shoot-button');
-const computerThrow = document.getElementById('computer-throw');
+const computerResult = document.getElementById('computer-result');
 const resultsArea = document.getElementById('results-area');
 const winsCount = document.getElementById('wins-count');
 const totalGamesCount = document.getElementById('total-games-coun');
@@ -14,6 +14,6 @@ let total = 0;
 // set event listeners to update state and DOM
 
 shootButton.addEventListener('click', () => {
-    
+    computerthrow
 
 })

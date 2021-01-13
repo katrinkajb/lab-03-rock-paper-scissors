@@ -19,26 +19,30 @@
     <main class="main-section">
         <section >
             <img class="main-logo" src="assets/rock-paper-scissors.jpg"/>
+            <p id='instructions'>To play the game, choose an option below and click the Throw button. The outcome of the game is determined by 3 simple rules:
+                <li>Rock wins against scissors</li>
+                <li>Scissors win against paper</li>
+                <li>Paper wins against rock</li>
+            </p>
             <h2>
                 Choose and Throw
             </h2>
-            <p>Instructions</p>
-            <div>
+            <div id='options'>
                 <label>
-                    Rock <img src="assets/rock-03.jpg" id='options-pics'>
-                    <input type="radio" name='rsp' value="rock"></input>
+                    <input type="radio" name='rsp' value="rock"/>
+                    <img src="assets/rock-03.jpg" id='options-pics'>
                 </label>
                 <label>
-                    Paper <img src="assets/paper.jpg" id='options-pics'>
-                    <input type="radio" name='rsp' value="paper"></input>
+                    <input type="radio" name='rsp' value="paper"/>
+                    <img src="assets/paper.jpg" id='options-pics'>
                 </label>
                 <label>
-                    Scissors <img src="assets/scissors.jpg" id='options-pics'>
-                    <input type="radio" name='rsp' value="scissors"></input>
+                    <input type="radio" name='rsp' value="scissors"/>
+                    <img src="assets/scissors.jpg" id='options-pics'>
                 </label>
             </div>
             <button id='shoot-button'>Shoot</button>
-            <div id='computer-throw'>Computer throw: (hidden) <span id='results-area'>Results message</span></div>
+            <div id='computer-result'>Computer throw: (hidden) <span id='results-area'>Results message</span></div>
             <div id='wins-count'>Wins:</div>
             <div id='losses-count'>Losses:</div>
             <div id='total-games-count'>Total Games:</div>
