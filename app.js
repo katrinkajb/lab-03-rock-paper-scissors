@@ -1,7 +1,5 @@
 import { rockPaperScissorsFunc, determineWinner } from './utils.js';
 
-
-// import functions and grab DOM elements
 const shootButton = document.getElementById('shoot-button');
 const computerResult = document.getElementById('computer-result');
 const resultsArea = document.getElementById('results-area');
@@ -9,12 +7,13 @@ const winsCount = document.getElementById('wins-count');
 const lossesCount = document.getElementById('losses-count');
 const totalGamesCount = document.getElementById('total-games-count');
 const resetButton = document.getElementById('reset-button');
-
+const resetClicks = document.getElementById('reset-counter');
 
 // initialize state
 let wins = 0;
 let total = 0;
 let draws = 0;
+let resets = 0;
 
 // set event listeners to update state and DOM
 shootButton.addEventListener('click', () => {
@@ -65,7 +64,6 @@ shootButton.addEventListener('click', () => {
 })
 
 
-
 function updateResults() {
     winsCount.textContent = wins;
     lossesCount.textContent = total - wins - draws;
@@ -76,8 +74,12 @@ resetButton.addEventListener('click', () => {
     wins = 0;
     total = 0;
     draws = 0;
+    resets++;
 
     computerResult.textContent = '';
     resultsArea.textContent = '';
     updateResults();
+
+    // reset counter
+    resetClicks.textContent = resets + ' reset(s)';
 })
