@@ -8,6 +8,7 @@ const resultsArea = document.getElementById('results-area');
 const winsCount = document.getElementById('wins-count');
 const lossesCount = document.getElementById('losses-count');
 const totalGamesCount = document.getElementById('total-games-count');
+const resetButton = document.getElementById('reset-button');
 
 
 // initialize state
@@ -52,7 +53,6 @@ shootButton.addEventListener('click', () => {
         resultsArea.textContent = 'Scissors cut paper. You win!';
         wins++;
     }
-
     else if (winner === 'paper win') {
         resultsArea.textContent = 'Paper covers rock. You win!';
         wins++
@@ -67,11 +67,17 @@ shootButton.addEventListener('click', () => {
 
 
 function updateResults() {
-    // resultsArea.textContent = winner; NEED TO DO IN FUNCTION
     winsCount.textContent = wins;
     lossesCount.textContent = total - wins - draws;
     totalGamesCount.textContent = total;
 }
 
+resetButton.addEventListener('click', () => {
+    wins = 0;
+    total = 0;
+    draws = 0;
 
-
+    computerResult.textContent = '';
+    resultsArea.textContent = '';
+    updateResults();
+})
