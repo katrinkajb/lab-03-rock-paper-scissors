@@ -1,1 +1,2 @@
-import './example.test.js';
+import './rockPaperScissors.test.js';
+import './determineWinner.test.js';

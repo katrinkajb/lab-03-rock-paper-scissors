@@ -14,40 +14,47 @@
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png"/>
-        </div>
+        Rock Paper Scissors
     </header>
-    <main>
-        <section class="main-section">
-            <img class="main-logo" src="assets/alchemy-logo.png"/>
+    <main class="main-section">
+        <section >
+            <img class="main-logo" src="assets/rock-paper-scissors.jpg"/>
+            <p id='instructions'>Choose an option below and click the Throw button. The outcome of the game is determined by 3 simple rules:
+                <li>Rock wins against scissors</li>
+                <li>Scissors win against paper</li>
+                <li>Paper wins against rock</li>
+            </p>
             <h2>
-                Welcome to Alchemy Bootstrap!
+                Choose and Throw
             </h2>
-
-            <content>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
-            </p>
-
+            <div id='options'>
+                <label>
+                    <input type="radio" name='rsp' value="Rock"/>
+                    <img src="assets/rock-03.jpg" id='options-pics'>
+                </label>
+                <label>
+                    <input type="radio" name='rsp' value="Paper"/>
+                    <img src="assets/paper.jpg" id='options-pics'>
+                </label>
+                <label>
+                    <input type="radio" name='rsp' value="Scissors"/>
+                    <img src="assets/scissors.jpg" id='options-pics'>
+                </label>
+            </div>
+            <button id='shoot-button'>Shoot</button>
+            <div><span id='computer-result'></span></div>
+            <div><span id='results-area'></span></div>
+            <div>Wins:<span id='wins-count'></span></div>
+            <div>Losses: <span id='losses-count'></span></div>
+            <div>Total Games: <span id='total-games-count'></span></div>
+        <hr>
+            <button id='reset-button'>Reset Game</button>
+            <div><span id='reset-counter'></span></div>
         </section>
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+        <div class="copy gutter-right">KB's 가위 바위 보!</div>
     </footer>
-
     <script type="module" src="app.js"></script>
 </body>
 
