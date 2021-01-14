@@ -1,4 +1,4 @@
-import { rockPaperScissorsFunc, determineWinner } from './utils.js';
+import { computerThrowFunc, determineWinnerFunc } from './utils.js';
 
 const shootButton = document.getElementById('shoot-button');
 const computerResult = document.getElementById('computer-result');
@@ -17,51 +17,29 @@ let resets = 0;
 
 // set event listeners to update state and DOM
 shootButton.addEventListener('click', () => {
-// a) Store computer's throw
+    total++;
+
     const computerThrow = Math.round(Math.random() * 3);
-    total++
-
-//     -Set up a function to randomly pick between rock, scissors, and paper
-    const computerRockPaperScissors = rockPaperScissorsFunc(computerThrow);
-    computerResult.textContent = "Computer threw: " + computerRockPaperScissors;
-
-// b) Store user's throw
-//     -grab selected input and get its value
+    const computerRockPaperScissors = computerThrowFunc(computerThrow);
     const radioSelection = document.querySelector('input[type="radio"]:checked');
     const userChoice = radioSelection.value;
-
-
-// c) Compare user choice and computer throw. Write a function
-    const winner = determineWinner(userChoice, computerRockPaperScissors);
-
-// d) Display results of throw.
-    if (winner === 'draw') {
-        resultsArea.textContent = "It's a draw!";
-        draws++;
-    }
-    else if (winner === 'rock lose') {
-        resultsArea.textContent = 'Paper covers rock. You lose.';
-    }
-    else if (winner === 'paper lose') {
-        resultsArea.textContent = 'Scissors cut paper. You lose.';
-    }
-    else if (winner === 'scissors lose') {
-        resultsArea.textContent = 'Rock smashes scissors. You lose.';
-    }
-    else if (winner === 'scissors win') {
-        resultsArea.textContent = 'Scissors cut paper. You win!';
-        wins++;
-    }
-    else if (winner === 'paper win') {
-        resultsArea.textContent = 'Paper covers rock. You win!';
-        wins++
-    }
-    else if (winner === 'rock win') {
-        resultsArea.textContent = 'Rock smashes scissors. You win!';
-        wins++;
-    }
+    
+    computerResult.textContent = 'Computer threw: ' + computerRockPaperScissors;
+    const winner = determineWinnerFunc(userChoice, computerRockPaperScissors);
+   
+    if (winner === 'draw') draws++;
+    if (winner === 'win') wins++;
+    
+    if (winner === 'draw') resultsArea.textContent = "It's a draw!";
+    if (winner === 'rock lose') resultsArea.textContent = 'Paper covers rock. You lose.';
+    if (winner === 'paper lose') resultsArea.textContent = 'Scissors cut paper. You lose.';
+    if (winner === 'scissors lose') resultsArea.textContent = 'Rock smashes scissors. You lose.';
+    if (winner === 'scissors win') resultsArea.textContent = 'Scissors cut paper. You win!';
+    if (winner === 'paper win') resultsArea.textContent = 'Paper covers rock. You win!';  
+    if (winner === 'rock win') resultsArea.textContent = 'Rock smashes scissors. You win!';
+    
     updateResults();
-})
+});
 
 
 function updateResults() {
@@ -79,7 +57,5 @@ resetButton.addEventListener('click', () => {
     computerResult.textContent = '';
     resultsArea.textContent = '';
     updateResults();
-
-    // reset counter
     resetClicks.textContent = resets + ' reset(s)';
-})
+});
