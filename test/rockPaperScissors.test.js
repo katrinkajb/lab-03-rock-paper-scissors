@@ -3,10 +3,10 @@ import { rockPaperScissorsFunc } from '../utils.js'
 
 const test = QUnit.test;
 
-test('When 0 is given, it should return "rock"', (expect) => {
+test('When 0 is given, it should return "Rock"', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'rock';
+    const expected = 'Rock';
     
     //Act 
     // Call the function you're testing and set the result to a const
@@ -17,10 +17,10 @@ test('When 0 is given, it should return "rock"', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('When 1 is given, it should return "paper"', (expect) => {
+test('When 1 is given, it should return "Paper"', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'paper';
+    const expected = 'Paper';
     
     //Act 
     // Call the function you're testing and set the result to a const
@@ -31,10 +31,10 @@ test('When 1 is given, it should return "paper"', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('When 0 is given, it should return "scissors"', (expect) => {
+test('When 0 is given, it should return "Scissors"', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'scissors';
+    const expected = 'Scissors';
     
     //Act 
     // Call the function you're testing and set the result to a const

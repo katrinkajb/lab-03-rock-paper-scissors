@@ -17,42 +17,42 @@ test('user and computer choose same thing, return "draw"', (expect) => {
 });
 
 // Losing scenarios
-test('user chooses rock and computer chooses paper, return "Paper covers rock. You lose"', (expect) => {
+test('user chooses rock and computer chooses paper, return "rock lose"', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'Paper covers rock. You lose.';
+    const expected = 'rock lose';
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = determineWinner('rock', 'paper');
+    const actual = determineWinner('Rock', 'Paper');
 
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
 
-test('user chooses paper and computer chooses scissors, return "Scissors cut paper. You lose"', (expect) => {
+test('user chooses paper and computer chooses scissors, return "paper lose"', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'Scissors cut paper. You lose.';
+    const expected = 'paper lose';
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = determineWinner('paper', 'scissors');
+    const actual = determineWinner('Paper', 'Scissors');
 
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
 
-test('user chooses scissors and computer chooses rock, return "Rock smashes scissors. You lose"', (expect) => {
+test('user chooses scissors and computer chooses rock, return "scissors lose"', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'Rock smashes scissors. You lose.';
+    const expected = 'scissors lose';
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = determineWinner('scissors', 'rock');
+    const actual = determineWinner('Scissors', 'Rock');
 
     //Expect
     // Make assertions about what is expected versus the actual result
@@ -60,42 +60,42 @@ test('user chooses scissors and computer chooses rock, return "Rock smashes scis
 });
 
 // Winning Scenarios
-test('user chooses scissors and computer chooses paper, return "Rock smashes scissors. You lose"', (expect) => {
+test('user chooses scissors and computer chooses paper, return "scissors win', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'Scissors cut paper. You win!';
+    const expected = 'scissors win';
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = determineWinner('scissors', 'paper');
+    const actual = determineWinner('Scissors', 'Paper');
 
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
 
-test('user chooses paper and computer chooses rock, return "Paper covers rock. You win!"', (expect) => {
+test('user chooses paper and computer chooses rock, return "paper win"', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'Paper covers rock. You win!';
+    const expected = 'paper win';
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = determineWinner('paper', 'rock');
+    const actual = determineWinner('Paper', 'Rock');
 
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
 
-test('user chooses rock and computer chooses scissors, return "Rock smashes scissors. You win!"', (expect) => {
+test('user chooses rock and computer chooses scissors, return "rock win"', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'Rock smashes scissors. You win!';
+    const expected = 'rock win';
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = determineWinner('rock', 'scissors');
+    const actual = determineWinner('Rock', 'Scissors');
 
     //Expect
     // Make assertions about what is expected versus the actual result
